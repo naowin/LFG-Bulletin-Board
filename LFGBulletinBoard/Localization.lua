@@ -96,6 +96,7 @@ GBB.locales = {
 		["BtnInvite"]="Invite %s",
 		["BtnWho"]="Who %s",
 		["BtnIgnore"]="Ignore %s",
+		["BtnCopyMsg"]="Copy %ss message",
 		["BtnFold"]="Fold",
 		["BtnFoldAll"]="Fold all",
 		["BtnUnFoldAll"]="Unfold all",

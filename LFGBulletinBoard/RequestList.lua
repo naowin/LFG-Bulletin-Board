@@ -305,6 +305,10 @@ local function IgnoreRequest(name)
 	C_FriendList.AddIgnore(name)
 end
 
+local function CopyMsgRequest(msg)
+	ChatFrame_OpenChat(msg)
+end
+
 function GBB.Clear  ()
 	if GBB.ClearNeeded or GBB.ClearTimer<time() then
 		local newRequest={}
@@ -775,6 +779,7 @@ local function createMenu(DungeonID,req)
 		GBB.PopupDynamic:AddItem(string.format(GBB.L["BtnWhisper"],req.name),false,WhisperRequest,req.name)
 		GBB.PopupDynamic:AddItem(string.format(GBB.L["BtnInvite"],req.name),false,InviteRequest,req.name)
 		GBB.PopupDynamic:AddItem(string.format(GBB.L["BtnIgnore"],req.name),false,IgnoreRequest,req.name)
+		GBB.PopupDynamic:AddItem(string.format(GBB.L["BtnCopyMsg"],req.name),false,CopyMsgRequest,req.message)
 		GBB.PopupDynamic:AddItem("",true)
 	end
 	if DungeonID then
